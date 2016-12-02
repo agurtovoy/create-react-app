@@ -66,5 +66,27 @@ module.exports = {
       dev: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss',
       prod: 'style!css?modules&-autoprefixer&importLoaders=1!postcss'
     }
+  },
+  'SVG_LOADER': {
+    toArray: 'loaders',
+    fileRegex: /\.svg$/,
+    getDev: function () {
+      return {
+        test: /\.svg$/,
+        loader: 'react-svg'
+      }
+    },
+    getProd: function () {
+      return {
+        test: /\.svg$/,
+        loader: 'react-svg',
+        query: {
+          svgo: {
+            plugins: [ { removeTitle: false } ],
+            floatPrecision: 2
+          }
+        }
+      }
+    }
   }
 }
