@@ -69,23 +69,27 @@ module.exports = {
   },
   'SVG_LOADER': {
     toArray: 'loaders',
-    fileRegex: /\.svg$/,
+    fileRegex: /\.inline\.svg$/,
     getDev: function () {
       return {
-        test: /\.svg$/,
-        loader: 'react-svg'
+        test: /\.inline\.svg$/,
+        loader: 'babel?presets[]=es2015,presets[]=react!react-svg?' + JSON.stringify({
+          svgo: {
+            plugins: [ { removeTitle: false } ],
+            floatPrecision: 2
+            }
+        })
       }
     },
     getProd: function () {
       return {
-        test: /\.svg$/,
-        loader: 'react-svg',
-        query: {
+        test: /\.inline\.svg$/,
+        loader: 'babel?presets[]=es2015,presets[]=react!react-svg?' + JSON.stringify({
           svgo: {
             plugins: [ { removeTitle: false } ],
             floatPrecision: 2
-          }
-        }
+            }
+        })
       }
     }
   }
