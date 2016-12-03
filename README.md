@@ -11,6 +11,7 @@ The reason for this fork's existence is explained better in [this Medium article
 * LESS
 * SASS
 * CSS modules
+* react-svg-loader
 
 **the features are optional and can be turned on/off individually*
 
@@ -28,6 +29,7 @@ The generated project comes with SASS, LESS, and CSS modules support by default,
 - ```REACT_APP_LESS=true``` - enable LESS support
 - ```REACT_APP_STYLUS=true``` - enable Stylus support
 - ```REACT_APP_CSS_MODULES=true``` - enable CSS modules
+- ```REACT_APP_SVG_LOADER``` - enable [react-svg-loader](https://github.com/boopathi/react-svg-loader)
 
 #### Babel
 - ```REACT_APP_BABEL_STAGE_0=true``` - enable stage-0 Babel preset
