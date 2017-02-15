@@ -1,6 +1,6 @@
 {
   "name": "@nextspark/react-scripts",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "description": "Allow custom config for create-react-app without ejecting",
   "repository": "agurtovoy/create-react-app",
   "license": "BSD-3-Clause",
